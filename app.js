@@ -2,17 +2,52 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 
-//const heading =  React.createElement("h1",{id: "heading"},"Hello world from React");
-const parent = React.createElement("div",{id: "parent"},[
-React.createElement("div",{id: "child"},
-[React.createElement("h1",{},"this is h1 tag"),
-React.createElement("h2",{},"this is h2 tag"),]
-),
-React.createElement("div",{id: "child2"},
-[React.createElement("h1",{},"this is h1 tag"),
-React.createElement("h2",{},"this is h2 tag"),]
-)],
-);
-console.log(parent);
+     // element inside elememt
+     const ele = <span>Elememt inside element</span>;
+
+// react element
+//Syntax
+const title = (
+    <h1 className="head" tabIndex="5">
+        {ele};
+        <br />
+        <br></br>
+        React elememt
+    </h1>
+        );
+   
+
+
+        //two print two components 2
+const Title = ()=> (
+<h1 className="head" tabIndex="5">
+    react component 2
+</h1>
+    );
+
+    // js code to write inside component using {}
+    // js code to write inside component using {}
+    const number = 100000;
+
+    //React functional component 1
+    //syntax
+    const Headingcomponent = () => (
+        <div id="container">
+            <Title />;
+            <Title></Title>;
+            {Title()};
+            {title};
+            {100+200};
+            <h1>{number}</h1>;
+        <h1>React component 1</h1>;
+        </div>
+    );
+    /*syntax2
+    const Headingcomponent2 = () => (
+    <h1 classname="heading">React component</h1>
+    );
+    */
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+root.render(<Headingcomponent />);
+
