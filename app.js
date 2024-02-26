@@ -21,7 +21,7 @@ const title = (
         //two print two components 2
 const Title = ()=> (
 <h1 className="head" tabIndex="5">
-    react component 2
+    react component repeat
 </h1>
     );
 
