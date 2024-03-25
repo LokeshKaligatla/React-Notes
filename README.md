@@ -18,3 +18,12 @@
     * Address
     * contact
     */ 
+
+    TWO types of exports/imports
+
+    -Default Export/import
+    export default Component;
+    import component from "path"
+
+    -Named export/import
+    import {component} from "path;
