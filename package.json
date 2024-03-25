@@ -2,8 +2,10 @@
   "name": "react-course",
   "version": "1.0.0",
   "description": "This is a react course by Nameste react",
+  "main": "app.js",
   
   "scripts": {
+    "start": "parcel index.html",
     "test": "jest"
   },
   "repository": {
