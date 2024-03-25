@@ -26,4 +26,12 @@
     import component from "path"
 
     -Named export/import
-    import {component} from "path;
+    import {component} from "path;
+
+    # React Hooks
+     they are normal(js functions OR utility functions )
+     developed by fb developers
+     they are inside React in node modules
+     two most important HOOKS
+     -useState() --> superpowerful state in React
+     -useEffect()

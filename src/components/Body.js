@@ -1,19 +1,63 @@
 import RestaurantCard from "./RestaurantCard";
 import resList from "../utils/mockData";
+import { useState } from "react";
 
 const Body = () => {
+
+    
+       //Local state varible = super powerful varible
+       const [Rlist, setRlist] = useState(resList);  // Array destructuring
+
+        // normal js varible
+
+    // let Rlist = [
+
+    //     {           
+    //         data: {              
+    //           id: '121602',
+    //           name: 'Kannur Food Point',                           
+    //           cloudinaryImageId: 'bmwn4n4bn6n1tcpc8x2h',
+    //           cuisines: ['Kerala', 'Chinese'],              
+    //           costForTwo: 30000,             
+    //           deliveryTime: 24,              
+    //           avgRating: '3.9',               
+    //         },            
+    //       },
+
+    //       {           
+    //         data: {              
+    //           id: '121603',
+    //           name: 'Lokesh Food Point',                           
+    //           cloudinaryImageId: 'bmwn4n4bn6n1tcpc8x2h',
+    //           cuisines: ['Kerala', 'Chinese'],              
+    //           costForTwo: 30000,             
+    //           deliveryTime: 24,              
+    //           avgRating: '4.5',               
+    //         },            
+    //       },
+          
+    //     ];
     return (
       <div className="body">
         <div className="search-container">
           <input type="text" placeholder="Search Food or Restaurant" />
           <button>Search</button>
         </div>
+        <div className="filter">
+            <button className="filter-btn" onClick={()=>{
+               // filter logic
+              const FRlist = Rlist.filter(
+                (res)=>res.data.avgRating > 4
+               );
+               setRlist(FRlist);
+                }}>Top rated</button>
+        </div>
         <div className="res-container">
          
   
           {/* // * looping through the <RestaurentCard /> components Using Array.map() method */}
   
-          {resList.map((restaurant) => (
+          {Rlist.map((restaurant) => (
             <RestaurantCard key={restaurant.data.id} resData={restaurant} />
           ))}
   
